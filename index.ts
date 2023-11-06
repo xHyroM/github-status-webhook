@@ -50,10 +50,7 @@ async function checkIncident(incident: any) {
     message = await webhookClient.fetchMessage(messageId);
   } catch (e) {
     // message most likely was deleted - send a new one
-    if (e === DiscordAPIError) {
-      await createMessage(incident);
-      return;
-    }
+    return;
   }
 
   // message does not exist anymore - send a new one
