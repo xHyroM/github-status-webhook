@@ -55,7 +55,7 @@ async function checkIncident(incident: any) {
 
   // message does not exist anymore - send a new one
   if (message === undefined) {
-    await createMessage(incident);
+    //await createMessage(incident);
     return;
   }
 
